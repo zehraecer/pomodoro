@@ -91,6 +91,20 @@ body {
   margin-top: 63px;
 }
 
+.modal-form {
+  display: flex;
+
+  input {
+    margin: 0;
+    padding: 0;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 425px) {
 
   .btns {
