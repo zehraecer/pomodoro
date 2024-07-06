@@ -20,19 +20,24 @@ export const Modal = () => {
                 <div className="modal-middle">
                     <h3>TIME (MINUTES)</h3>
                     <form className="modal-form">
+
                         <div>
                             <span>pomodoro</span>
                             <input type="number" />
                         </div>
                         <div>
                             <span>short break</span>
-                            <input type="number" name="" />
+                            <input type="number" />
+
                         </div>
                         <div>
                             <span>long break</span>
-                            <input type="number" name="" />
+                            <input type="number" />
+
                         </div>
+                        <button type="submit">Apply</button>
                     </form>
+
                 </div>
             </dialog>
         </>
