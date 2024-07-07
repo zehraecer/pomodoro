@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { UserContext } from "../App"
 
 export const Modal = () => {
-    const { isClicked, setIsClicked, modalRef, formRef, minute, setMinute, second, setSecond, state, setState } = useContext(UserContext)
+    const { setIsClicked, modalRef, formRef, setMinute, setSecond, setState, setShort } = useContext(UserContext)
     const closeModal = () => {
         setIsClicked(isClicked => !isClicked)
         modalRef.current.close()
@@ -13,6 +13,7 @@ export const Modal = () => {
         const formData = new FormData(formRef.current)
         const formObj = Object.fromEntries(formData.entries());
         setMinute([formObj.pomodoro] - 1)
+        setShort([formObj.short])
         setSecond(59)
         setState(true)
         modalRef.current.close()
