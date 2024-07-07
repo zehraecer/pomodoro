@@ -19,32 +19,28 @@ function App() {
   const [short, setShort] = useState(0)
 
   useEffect(() => {
-    if (state === true)
-      setTimeout(() => {
+
+    if (state === true) {
+      let deneme = setTimeout(() => {
         setSecond(second => second - 1)
         if (second === 0) {
           setMinute(minute => minute - 1)
           setSecond(59)
         }
-      }, 1000)
-    if (minute === 0 || second === 0) {
-      return
+      }, 100)
+      if (minute === 0 && second === 0) {
+        return clearInterval(deneme)
+      }
     }
-
   }, [minute, second])
-
-
-
   return (
     <UserContext.Provider value={{ isClicked, setIsClicked, modalRef, formRef, minute, setMinute, second, setSecond, state, setState, short, setShort }}>
-
       <div className='container'>
         <Header />
         <Buttons />
         <Content />
         <Modal />
       </div>
-
     </UserContext.Provider>
   )
 }
