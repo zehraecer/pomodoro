@@ -26,7 +26,7 @@ function App() {
           setMinute(minute => minute - 1)
           setSecond(59)
         }
-      }, 100)
+      }, 1000)
     if (minute === 0 || second === 0) {
       return
     }
