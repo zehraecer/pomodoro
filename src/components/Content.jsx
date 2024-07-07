@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { UserContext } from "../App"
 export const Content = () => {
 
-    const { isClicked, setIsClicked, modalRef } = useContext(UserContext)
+    const { isClicked, setIsClicked, modalRef, minute, setMinute, second, setSecond } = useContext(UserContext)
 
     const handleClick = () => {
         setIsClicked(isClicked => !isClicked)
@@ -12,9 +12,11 @@ export const Content = () => {
 
         <>
             <div>
-                <div className="content">
-                    <span >17:59 </span>
-                    <h6>PAUSE</h6>
+                <div className="deneme">
+                    <div className="content">
+                        <span >{minute}:{second} </span>
+                        <h6>PAUSE</h6>
+                    </div>
                 </div>
 
                 <div className="shape" onClick={handleClick}>

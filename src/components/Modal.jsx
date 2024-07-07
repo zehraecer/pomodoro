@@ -2,13 +2,22 @@ import { useContext } from "react"
 import { UserContext } from "../App"
 
 export const Modal = () => {
-    const { isClicked, setIsClicked, modalRef } = useContext(UserContext)
+    const { isClicked, setIsClicked, modalRef, formRef, minute, setMinute, second, setSecond, state, setState } = useContext(UserContext)
     const closeModal = () => {
         setIsClicked(isClicked => !isClicked)
         modalRef.current.close()
-
     }
 
+    const handleClick = (e) => {
+        e.preventDefault()
+        const formData = new FormData(formRef.current)
+        const formObj = Object.fromEntries(formData.entries());
+        setMinute([formObj.pomodoro] - 1)
+        setSecond(59)
+        setState(true)
+        modalRef.current.close()
+
+    }
     return (
         <>
             <dialog className="modal" ref={modalRef}>
@@ -19,23 +28,23 @@ export const Modal = () => {
                 </div>
                 <div className="modal-middle">
                     <h3>TIME (MINUTES)</h3>
-                    <form className="modal-form">
+                    <form className="modal-form" ref={formRef}>
 
                         <div>
                             <span>pomodoro</span>
-                            <input type="number" />
+                            <input type="number" name="pomodoro" />
                         </div>
                         <div>
                             <span>short break</span>
-                            <input type="number" />
+                            <input type="number" name="short" />
 
                         </div>
                         <div>
                             <span>long break</span>
-                            <input type="number" />
+                            <input type="number" name="long" />
 
                         </div>
-                        <button type="submit">Apply</button>
+                        <button type="submit" onClick={handleClick}>Apply</button>
                     </form>
 
                 </div>
