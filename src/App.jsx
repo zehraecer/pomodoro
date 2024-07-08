@@ -28,20 +28,13 @@ function App() {
     if (state === true) {
 
       let stopTime = setTimeout(() => {
-        if (second >= 10) {
-          setSecond(second => second - 1)
-        }
-        if (second < 10) {
-          setSecond(second => "0" + (second - 1))
-          // setSecond(second => "0" + second - 1)
-        }
+        setSecond(second => second - 1)
         if (second === 0) {
           setMinute(minute => minute - 1)
           setSecond(59)
         }
-
       }, 100)
-      if (minute === 0 && second === "00") {
+      if (minute === 0 && second === 0) {
         play()
         // setState(false)
         return clearInterval(stopTime)
