@@ -1,9 +1,11 @@
 import { createContext, useEffect, useRef, useState } from 'react'
 import './App.css'
+import useSound from 'use-sound'
 import { Header } from './components/header'
 import { Buttons } from './components/Buttons'
 import { Content } from './components/Content'
 import { Modal } from './components/Modal'
+import sound from '../public/sounds/sound.mp3'
 
 export const UserContext = createContext()
 function App() {
@@ -20,6 +22,7 @@ function App() {
   const [isLong, setIsLong] = useState(false)
   const [isPomodoro, setIsPomodoro] = useState(false)
   const [istrue, setIsTrue] = useState(false)
+  const [play] = useSound(sound)
 
   useEffect(() => {
     if (state === true) {
@@ -31,6 +34,7 @@ function App() {
         }
       }, 100)
       if (minute === 0 && second === 0) {
+        play()
         alert("süre bitti")
         return clearInterval(stopTime)
       }
