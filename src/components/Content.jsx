@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { UserContext } from "../App"
 export const Content = () => {
 
-    const { setIsClicked, modalRef, minute, second, setSecond, setMinute, setState, istrue, setIsTrue, state } = useContext(UserContext)
+    const { setIsClicked, modalRef, minute, second, setSecond, setMinute, setState, state } = useContext(UserContext)
 
     const handleClick = () => {
         setIsClicked(isClicked => !isClicked)
@@ -14,12 +14,8 @@ export const Content = () => {
             setSecond(59)
             setMinute(minute => minute - 1)
         }
-        // setMinute(minute => minute - 1)
-        // setIsTrue(true)
-        console.log(state);
     }
     return (
-
         <>
             <div>
                 <div className="deneme">
@@ -28,7 +24,6 @@ export const Content = () => {
                         <h6> {state === true ? "PAUSE" : "START"} </h6>
                     </div>
                 </div>
-
                 <div className="shape" onClick={handleClick}>
                     <img src="shape.svg" alt="" />
                 </div>

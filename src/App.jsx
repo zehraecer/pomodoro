@@ -20,7 +20,6 @@ function App() {
   const [isLong, setIsLong] = useState(false)
   const [isPomodoro, setIsPomodoro] = useState(false)
   const [istrue, setIsTrue] = useState(false)
-  const [x, setX] = useState(0)
 
   useEffect(() => {
     if (state === true) {
@@ -44,7 +43,6 @@ function App() {
     }
   }, [minute, second, istrue, state])
 
-  // console.log(second.length);
   return (
     <UserContext.Provider value={{
       isClicked, setIsClicked, modalRef,

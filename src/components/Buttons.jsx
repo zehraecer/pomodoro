@@ -2,8 +2,7 @@ import { useContext } from "react"
 import { UserContext } from "../App"
 
 export const Buttons = () => {
-
-    const { isShort, setIsShort, isLong, setIsLong, short, setMinute, setSecond, long, pomodoro, setPomodoro, isPomodoro, setIsPomodoro } = useContext(UserContext)
+    const { setIsShort, setIsLong, short, setMinute, setSecond, long, pomodoro, setIsPomodoro } = useContext(UserContext)
 
     const handleShortClick = () => {
         console.log("djkgnf");
@@ -21,9 +20,7 @@ export const Buttons = () => {
         setMinute(pomodoro)
         setSecond("00")
     }
-
     return (
-
         <>
             <div className="btns">
                 <a onClick={handlePomodoroClick} >pomodoro</a>
