@@ -14,8 +14,11 @@ function App() {
   const [second, setSecond] = useState("00")
   const [state, setState] = useState(false)
   const [short, setShort] = useState(0)
+  const [long, setLong] = useState(0)
+  const [pomodoro, setPomodoro] = useState(0)
   const [isShort, setIsShort] = useState(false)
   const [isLong, setIsLong] = useState(false)
+  const [isPomodoro, setIsPomodoro] = useState(false)
   const [istrue, setIsTrue] = useState(false)
   const [x, setX] = useState(0)
 
@@ -29,6 +32,7 @@ function App() {
         }
       }, 100)
       if (minute === 0 && second === 0) {
+        alert("süre bitti")
         return clearInterval(stopTime)
       }
       if (state === false) {
@@ -47,7 +51,9 @@ function App() {
       formRef, minute, setMinute, second,
       setSecond, state, setState, short,
       setShort, istrue, setIsTrue, isShort,
-      setIsShort, isLong, setIsLong
+      setIsShort, isLong, setIsLong, long,
+      setLong, pomodoro, setPomodoro,
+      isPomodoro, setIsPomodoro
     }}>
       <div className='container'>
         <Header />
