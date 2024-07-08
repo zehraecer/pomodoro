@@ -10,6 +10,10 @@ export const Content = () => {
     }
     const ornek = () => {
         setState(state => !state)
+        if (second === 0 && minute === 0) {
+
+            setSecond(59)
+        }
         // setIsTrue(true)
         console.log(state);
     }
@@ -20,7 +24,7 @@ export const Content = () => {
                 <div className="deneme">
                     <div className="content" onClick={ornek}>
                         <span >{minute}:{second} </span>
-                        <h6> PAUSE</h6>
+                        <h6> {state === true ? "PAUSE" : "START"} </h6>
                     </div>
                 </div>
 

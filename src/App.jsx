@@ -14,6 +14,8 @@ function App() {
   const [second, setSecond] = useState("00")
   const [state, setState] = useState(false)
   const [short, setShort] = useState(0)
+  const [isShort, setIsShort] = useState(false)
+  const [isLong, setIsLong] = useState(false)
   const [istrue, setIsTrue] = useState(false)
   const [x, setX] = useState(0)
 
@@ -40,7 +42,13 @@ function App() {
 
   // console.log(second.length);
   return (
-    <UserContext.Provider value={{ isClicked, setIsClicked, modalRef, formRef, minute, setMinute, second, setSecond, state, setState, short, setShort, istrue, setIsTrue }}>
+    <UserContext.Provider value={{
+      isClicked, setIsClicked, modalRef,
+      formRef, minute, setMinute, second,
+      setSecond, state, setState, short,
+      setShort, istrue, setIsTrue, isShort,
+      setIsShort, isLong, setIsLong
+    }}>
       <div className='container'>
         <Header />
         <Buttons />
