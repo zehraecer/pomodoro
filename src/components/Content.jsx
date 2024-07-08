@@ -10,10 +10,11 @@ export const Content = () => {
     }
     const ornek = () => {
         setState(state => !state)
-        if (second === 0 && minute === 0) {
-
+        if (second === 0 || second === "00") {
             setSecond(59)
         }
+
+        // setMinute(minute => minute - 1)
         // setIsTrue(true)
         console.log(state);
     }
