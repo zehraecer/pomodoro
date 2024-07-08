@@ -15,7 +15,7 @@ export const Modal = () => {
         setMinute([formObj.pomodoro] - 1)
         setShort([formObj.short])
         setSecond(59)
-        setState(true)
+        // setState(true)
         modalRef.current.close()
 
     }
