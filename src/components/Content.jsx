@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { UserContext } from "../App"
-export const Content = () => {
 
+export const Content = () => {
     const { setIsClicked, modalRef, minute, second, setSecond, setMinute, setState, state } = useContext(UserContext)
 
     const handleClick = () => {

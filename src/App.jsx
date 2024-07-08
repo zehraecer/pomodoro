@@ -26,15 +26,12 @@ function App() {
 
   useEffect(() => {
     if (state === true) {
-
       let stopTime = setTimeout(() => {
-        // setSecond(second => second - 1)
         if (second >= 10) {
           setSecond(second => second - 1)
         }
         if (second < 10) {
           setSecond(second => "0" + (second - 1))
-          // setSecond(second => "0" + second - 1)
         }
         if (second === "00") {
           setMinute(minute => minute - 1)
@@ -43,7 +40,6 @@ function App() {
       }, 100)
       if (minute === 0 && second === "00") {
         play()
-        // setState(false)
         return clearInterval(stopTime)
       }
     }
