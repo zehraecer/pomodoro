@@ -9,10 +9,17 @@ export const Content = () => {
         modalRef.current.showModal()
     }
     const ornek = () => {
-        setState(state => !state)
-        if (second === 0 || second === "00") {
-            setSecond(59)
-            setMinute(minute => minute - 1)
+        if (minute === "00" && second === "00") {
+            setState(false)
+        } else if (minute === 0 && second === "00") {
+            setState(false)
+        }
+        else {
+            setState(state => !state)
+            if (second === 0 || second === "00") {
+                setSecond(59)
+                setMinute(minute => minute - 1)
+            }
         }
     }
     return (

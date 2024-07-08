@@ -12,7 +12,7 @@ function App() {
   const [isClicked, setIsClicked] = useState(false)
   const modalRef = useRef()
   const formRef = useRef()
-  const [minute, setMinute] = useState("25")
+  const [minute, setMinute] = useState("00")
   const [second, setSecond] = useState("00")
   const [state, setState] = useState(false)
   const [short, setShort] = useState(5)
@@ -36,7 +36,7 @@ function App() {
           setSecond(second => "0" + (second - 1))
           // setSecond(second => "0" + second - 1)
         }
-        if (second === 0) {
+        if (second === "00") {
           setMinute(minute => minute - 1)
           setSecond(59)
         }
