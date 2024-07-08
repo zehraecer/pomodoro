@@ -12,8 +12,18 @@ export const Modal = () => {
         const formData = new FormData(formRef.current)
         const formObj = Object.fromEntries(formData.entries());
         setMinute([formObj.pomodoro])
-        setShort([formObj.short])
-        setLong([formObj.long])
+        // if (formObj.short === null)
+        console.log(formObj.short);
+        if (formObj.short === "") {
+            setShort(5)
+        } else {
+            setShort([formObj.short])
+        }
+        if (formObj.long === "") {
+            setLong(10)
+        } else {
+            setLong([formObj.long])
+        }
         setPomodoro([formObj.pomodoro])
         modalRef.current.close()
     }
