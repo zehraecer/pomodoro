@@ -5,7 +5,7 @@ import { Header } from './components/header'
 import { Buttons } from './components/Buttons'
 import { Content } from './components/Content'
 import { Modal } from './components/Modal'
-import sound from '../public/sounds/sound.mp3'
+import sound from '../public/sounds/sound2.mp3'
 
 export const UserContext = createContext()
 function App() {
@@ -35,7 +35,6 @@ function App() {
       }, 100)
       if (minute === 0 && second === 0) {
         play()
-        alert("süre bitti")
         return clearInterval(stopTime)
       }
       if (state === false) {
