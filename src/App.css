@@ -4,3 +4,118 @@
   padding: 2rem;
   text-align: center;
 }
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding-block: 20px 100px;
+  padding-inline: 35px;
+  border-radius: 25px;
+  position: relative;
+}
+
+.modal-form {
+  display: flex;
+  gap: 20px;
+
+  input {
+    margin: 0;
+    margin-top: 8px;
+    padding: 0;
+    width: 140px;
+    padding-block: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #EFF1FA;
+  }
+
+  button {
+    position: absolute;
+    font-family: Kumbh Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.84px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #F87070;
+    border-radius: 26.5px;
+    border: none;
+    padding: 21px 47px;
+    bottom: 10px;
+    right: 192px;
+  }
+
+  span {
+    font-family: Kumbh Sans;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.88px;
+    text-align: left;
+    color: #1E213F;
+    opacity: 40%;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.modal-middle {
+  h3 {
+    font-family: Kumbh Sans;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16.12px;
+    letter-spacing: 5px;
+    text-align: left;
+    color: #161932;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    font-family: Kumbh Sans;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34.73px;
+    text-align: left;
+    color: #161932;
+  }
+
+  h2 {
+    cursor: pointer;
+    color: #979797;
+  }
+}
+
+
+
+
+
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  input {
+    margin: 0;
+  }
+
+  button {
+    padding: 15px 25px;
+    bottom: 13px;
+    right: 69px;
+  }
+}
