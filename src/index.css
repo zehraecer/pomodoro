@@ -37,6 +37,7 @@ body {
   display: flex;
   gap: 5px;
   padding-block: 8px;
+  justify-content: center;
 
   a {
     cursor: pointer;
@@ -47,7 +48,7 @@ body {
     color: #6b6b6b;
     padding: 19px 25px;
 
-    &:active {
+    &:hover {
       border-radius: 26.5px;
       background-color: #F87070;
       color: #1E213F;
@@ -66,11 +67,13 @@ body {
 
 .content {
   cursor: pointer;
-  margin-top: 45px;
-  padding: 118px 78px;
+  width: 250px;
+  height: 192px;
+  margin-top: 25px;
+  padding: 112px 78px;
   background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
   border-radius: 50%;
-  /* border: 9px solid #F87070; */
+  border: 11px solid #F87070;
 
   span {
     font-size: 100px;
@@ -198,6 +201,7 @@ input[type="number" i] {
 
   .btns {
 
+
     a {
       padding: 15px 20px;
       font-size: 12px;
@@ -208,8 +212,8 @@ input[type="number" i] {
   }
 
   .content {
-    margin-top: 45px;
-    padding: 85px 30px;
+    margin-top: 24px;
+    padding: 85px 46px;
   }
 
   .modal-form {
