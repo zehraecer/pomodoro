@@ -1,6 +1,5 @@
 :root {
-  font-family: Kumbh Sans;
-  /* line-height: 1.5; */
+  font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
 }
 
@@ -17,84 +16,88 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #1e213f;
-  /* place-items: center; */
-  /* min-width: 320px;
-  min-height: 100vh; */
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 .pomodoro {
   margin-inline: auto;
   font-size: 32px;
   font-weight: 700;
-  line-height: 39.69px;
+  line-height: 1.24;
   text-align: center;
-  color: #D7E0FF;
-
+  color: #d7e0ff;
 }
 
 .btns {
   display: flex;
   gap: 5px;
   padding-block: 8px;
-  justify-content: center;
+}
 
-  a {
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17.36px;
-    text-align: left;
-    color: #6b6b6b;
-    padding: 19px 25px;
+.btns a {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.24;
+  text-align: left;
+  color: #6b6b6b;
+  padding: 19px 25px;
+  border-radius: 26.5px;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    &:hover {
-      border-radius: 26.5px;
-      background-color: #F87070;
-      color: #1E213F;
-    }
-
-  }
+.btns a:hover {
+  background-color: #f87070;
+  color: #1e213f;
 }
 
 .deneme {
-  /* padding: 15px 68px; */
-  box-shadow: 50px 50px 100px 0px #121530;
-  box-shadow: -50px -50px 100px 0px #272C5A;
   border-radius: 50%;
+}
 
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
   cursor: pointer;
-  width: 250px;
-  height: 192px;
-  margin-top: 25px;
-  padding: 112px 78px;
-  background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+  box-shadow: 50px 50px 100px 0px #121530, -50px -50px 100px 0px #272c5a;
+  margin-top: 45px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
   border-radius: 50%;
-  border: 11px solid #F87070;
+  border: 9px solid #f87070;
+  flex-direction: column
+}
 
-  span {
-    font-size: 100px;
-    font-weight: 700;
-    line-height: 124.02px;
-    letter-spacing: -5px;
-    text-align: center;
-    color: #D7E0FF;
+.content span {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.24;
+  letter-spacing: -5px;
+  text-align: center;
+  color: #d7e0ff;
+}
 
-  }
-
-  h6 {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 19.84px;
-    letter-spacing: 15px;
-    text-align: center;
-    color: #D7E0FF;
-
-  }
+.content h6 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.24;
+  letter-spacing: 15px;
+  text-align: center;
+  color: #d7e0ff;
 }
 
 .shape {
@@ -103,15 +106,14 @@ body {
   margin-top: 63px;
 }
 
-input[type="number" i] {
+input[type="number"] {
   padding-block: 0px;
   padding-inline: 0px;
 }
 
 .modal {
   background-color: #fff;
-  padding-block: 20px 100px;
-  padding-inline: 35px;
+  padding: 20px 35px;
   border-radius: 25px;
   position: relative;
 }
@@ -119,116 +121,104 @@ input[type="number" i] {
 .modal-form {
   display: flex;
   gap: 20px;
-
-  input {
-    margin: 0;
-    margin-top: 8px;
-    padding: 0;
-    width: 140px;
-    padding-block: 15px;
-    border-radius: 10px;
-    border: none;
-    background-color: #EFF1FA;
-  }
-
-  button {
-    position: absolute;
-    font-family: Kumbh Sans;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 19.84px;
-    text-align: center;
-    color: #FFFFFF;
-    background-color: #F87070;
-    border-radius: 26.5px;
-    border: none;
-    padding: 21px 47px;
-    bottom: 10px;
-    right: 192px;
-
-  }
-
-  span {
-    font-family: Kumbh Sans;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14.88px;
-    text-align: left;
-    color: #1E213F;
-    opacity: 40%;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
-.modal-middle {
-  h3 {
-    font-family: Kumbh Sans;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 16.12px;
-    letter-spacing: 5px;
-    text-align: left;
-    color: #161932;
-  }
+.modal-form input {
+  margin: 0;
+  margin-top: 8px;
+  padding: 15px;
+  width: 140px;
+  border-radius: 10px;
+  border: none;
+  background-color: #eff1fa;
+}
+
+.modal-form button {
+  position: absolute;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.24;
+  text-align: center;
+  color: #ffffff;
+  background-color: #f87070;
+  border-radius: 26.5px;
+  border: none;
+  padding: 21px 47px;
+  bottom: 10px;
+  right: 192px;
+}
+
+.modal-form span {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.24;
+  text-align: left;
+  color: #1e213f;
+  opacity: 40%;
+}
+
+.modal-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-middle h3 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.24;
+  letter-spacing: 5px;
+  text-align: left;
+  color: #161932;
 }
 
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  span {
-    font-family: Kumbh Sans;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 34.73px;
-    text-align: left;
-    color: #161932;
+.modal-header span {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.24;
+  text-align: left;
+  color: #161932;
+}
 
-  }
-
-  h2 {
-    cursor: pointer;
-    color: #979797;
-  }
+.modal-header h2 {
+  cursor: pointer;
+  color: #979797;
 }
 
 @media (max-width: 431px) {
-
-  .btns {
-
-
-    a {
-      padding: 15px 20px;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 14.88px;
-
-    }
+  .btns a {
+    padding: 15px 15px;
+    font-size: 12px;
+    line-height: 1.24;
   }
 
   .content {
-    margin-top: 24px;
-    padding: 85px 46px;
+    width: 250px;
+    height: 250px;
+    padding: 0;
   }
 
   .modal-form {
-    display: flex;
     flex-direction: column;
     gap: 20px;
+  }
 
-    input {
-      margin: 0;
-    }
+  .modal-form input {
+    width: 100%;
+  }
 
-    button {
-      padding: 15px 25px;
-      bottom: 13px;
-      right: 69px;
-    }
+  .modal-form button {
+    padding: 15px 25px;
+    bottom: 13px;
+    right: 69px;
   }
 }

@@ -24,12 +24,10 @@ export const Content = () => {
     }
     return (
         <>
-            <div>
-                <div className="deneme">
-                    <div className="content" onClick={ornek}>
-                        <span >{minute}:{second} </span>
-                        <h6> {state === true ? "PAUSE" : "START"} </h6>
-                    </div>
+            <div className="box">
+                <div className="content" onClick={ornek}>
+                    <span >{minute}:{second} </span>
+                    <h6> {state === true ? "PAUSE" : "START"} </h6>
                 </div>
                 <div className="shape" onClick={handleClick}>
                     <img src="shape.svg" alt="" />
