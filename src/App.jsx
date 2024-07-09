@@ -12,7 +12,7 @@ function App() {
   const [isClicked, setIsClicked] = useState(false)
   const modalRef = useRef()
   const formRef = useRef()
-  const [minute, setMinute] = useState("00")
+  const [minute, setMinute] = useState("25")
   const [second, setSecond] = useState("00")
   const [state, setState] = useState(false)
   const [short, setShort] = useState(5)
