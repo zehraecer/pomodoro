@@ -93,7 +93,7 @@ body {
   line-height: 1.24;
   letter-spacing: 15px;
   text-align: center;
-  color: #d7e0ff;
+
 }
 
 .shape {
@@ -196,6 +196,16 @@ input[type="number"] {
   }
 }
 
+.pause {
+  color: #F87070;
+}
+
+
+.start {
+  color: #d7e0ff;
+
+}
+
 @media (max-width: 431px) {
   .btns a {
     padding: 15px 20px;
@@ -207,6 +217,15 @@ input[type="number"] {
     width: 250px;
     height: 250px;
     padding: 0;
+
+    span {
+      font-size: 76px;
+    }
+
+    h6 {
+      font-size: 14px;
+      text-align: center;
+    }
   }
 
   .modal-form {
